@@ -39,6 +39,8 @@ library(dplyr)
 library(rysgran)
 library(RColorBrewer)
 
+# 관할해역 퇴적물 입도자료 - 또는 위 스크립트를 이용하여 DB에서 불러오기
+load("joiss_sedi_tex.RData", verbose=T)
 # 퇴적물 깊이 0-100 사이의 퇴적물 입도
 sedi_tex_100 <-  sedi_tex %>% filter(obs_depth >=0 & obs_depth <= 100) 
 depth.f <- as.factor(sedi_tex_100$obs_depth)
