@@ -81,11 +81,8 @@ ggplot(nfrdi.wq01, aes(x=factor(Seasons), y=v1)) +
   
   scale_x_discrete("Seasons", labels=c("Winter[JFM]", "Spring[AMJ]", "Summer[JAS]", "Autumn[OND]")) + 
   
-<<<<<<< HEAD
   scale_y_continuous(expand = c(0, 0)) +
   
-=======
->>>>>>> 2c2e11ab05c3012434b691a081aaa2f7b8f551f2
   labs(y="DO (mg/L)") + 
   
   theme(text=element_text(size=16))
@@ -97,18 +94,10 @@ ggplot(nfrdi.wq01, aes(x=factor(Seasons), y=v1)) +
 mName <- month(nfrdi.wq01$obs_dtime)
 
 ggplot(nfrdi.wq01, aes(x=factor(mName), y=v1)) + 
-  
   geom_bar(stat="summary", fun.y="mean", fill="darkcyan") + theme_bw() + 
-  
   scale_x_discrete("Month", labels=levels(factor(mName))) + 
-  
-<<<<<<< HEAD
   scale_y_continuous(expand = c(0, 0)) +
-  
-=======
->>>>>>> 2c2e11ab05c3012434b691a081aaa2f7b8f551f2
   labs(list(y="DO (mg/L)")) + 
-  
   theme(text=element_text(size=16))
 
 
