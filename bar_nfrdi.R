@@ -78,13 +78,8 @@ nfrdi.wq01 <- data1 %>% mutate(Seasons=quarter(obs_dtime), date=format(data1$obs
 ggplot(nfrdi.wq01, aes(x=factor(Seasons), y=v1)) + 
   geom_bar(stat="summary", fun.y="mean", fill="darkcyan") + theme_bw() + 
   scale_x_discrete("Seasons", labels=c("Winter[JFM]", "Spring[AMJ]", "Summer[JAS]", "Autumn[OND]")) + 
-<<<<<<< HEAD
   scale_y_continuous(expand = c(0, 0)) +
-=======
-  
   scale_y_continuous(expand = c(0, 0)) +
-  
->>>>>>> e8d62f97b8ddefdac77c6dec7451a6e466e09e03
   labs(y="DO (mg/L)") + 
   theme(text=element_text(size=16))
 
