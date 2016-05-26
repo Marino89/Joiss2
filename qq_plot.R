@@ -79,5 +79,5 @@ require(ggplot2)
 # 선택한 임의의 변수(조사항목) v1 
 x <- data1[,"v1"]
 
-qqnorm(x)
-qqline(x)
+qqnorm(x, col= 4)
+qqline(x, col = 2)
