@@ -66,3 +66,4 @@ imagep(t, z, t(g[['temperature']]), zlim=c(0, 30), ylab="Depth(m)", zlab="Temper
 imagep(t, z, t(g[['salinity']]), zlim=c(34, 35), ylab="Depth(m)", zlab="Salinity")
 plot(argo.joiss, which="trajectory")
 op
+   
