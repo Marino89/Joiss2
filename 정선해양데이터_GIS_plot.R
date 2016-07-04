@@ -26,7 +26,6 @@ data2 <- select(data2, obssite_id, loc_lat, loc_lon)
 
 data.merged <- merge(data1, data2, by="obssite_id") ## 정점명 기준 데이터 병합
 
-dataTest <- data1[!duplicated(data1[,7]),]
 
 ## Step.2 데이터 다듬기
 data.merged <- data.merged %>% 
@@ -47,11 +46,7 @@ map <- ggmap(get_googlemap(center = cent, zoom = 6, maptype = "roadmap",
                            ,style = c(feature = "all"
                                       , element = "labels"
                                       , visibility = "off")
-), extent = "device") +
-  coord_fixed(xlim = c(min(data.merged$loc_lon)-0.5,max(data.merged$loc_lon)+0.5)
-              ,ylim = c(min(data.merged$loc_lat)-0.5,max(data.merged$loc_lat)+0.5)
-              , ratio = 1, expand=F)
-
+), extent = "device")
 ## Step.4 분포도 Plotting 하기
 set.category <- unique(data.merged$obs_item_cd)
 set.start.date <- min(data.merged$obs_dtime) 
